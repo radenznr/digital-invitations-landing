@@ -72,7 +72,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 14px; /* Reduced from 16px for more compact mobile experience */
 }
 
 body {
@@ -135,20 +135,20 @@ button {
 /* Section Headers */
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px; /* Reduced from 60px */
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Reduced from 2.5rem */
     font-family: var(--font-display);
-    margin-bottom: 16px;
+    margin-bottom: 14px; /* Reduced from 16px */
     color: var(--text-primary);
 }
 
 .section-header p {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Reduced from 1.1rem */
     color: var(--text-secondary);
-    max-width: 600px;
+    max-width: 550px; /* Reduced from 600px */
     margin: 0 auto;
 }
 
@@ -159,18 +159,18 @@ button {
 .btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
+    gap: 6px; /* Reduced from 8px */
+    padding: 10px 20px; /* Reduced from 12px 24px */
     border: none;
     border-radius: var(--border-radius);
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     transition: var(--transition-normal);
-    font-size: 16px;
+    font-size: 14px; /* Reduced from 16px */
     text-align: center;
     justify-content: center;
-    min-height: 44px; /* Touch-friendly minimum height */
+    min-height: 40px; /* Reduced from 44px */
     -webkit-tap-highlight-color: rgba(212, 175, 55, 0.2);
 }
 
@@ -493,26 +493,26 @@ button {
 
 .preview-header h3 {
     font-family: var(--font-display);
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Reduced from 1.8rem */
     color: var(--primary-color);
-    margin-bottom: 8px;
+    margin-bottom: 6px; /* Reduced from 8px */
 }
 
 .preview-header p {
     color: var(--text-secondary);
-    margin-bottom: 24px;
+    margin-bottom: 20px; /* Reduced from 24px */
 }
 
 .preview-date {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Reduced from 1.1rem */
     font-weight: 600;
     color: var(--accent-color);
-    margin-bottom: 12px;
+    margin-bottom: 10px; /* Reduced from 12px */
 }
 
 .preview-location {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Reduced from 0.9rem */
 }
 
 /* Brand Preview Styling */
@@ -1509,14 +1509,14 @@ button {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        top: 80px;
+        top: 75px; /* Reduced from 80px */
         left: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 75px); /* Reduced from 80px */
         background: white;
         flex-direction: column;
         justify-content: start;
-        padding-top: 40px;
+        padding-top: 35px; /* Reduced from 40px */
         transition: left 0.3s ease;
         box-shadow: var(--shadow);
         z-index: 999;
@@ -1544,38 +1544,38 @@ button {
 
     .hero-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 35px; /* Reduced from 40px */
         text-align: center;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem; /* Reduced from 2.5rem */
     }
     
     .hero-description {
-        font-size: 1.1rem;
+        font-size: 1rem; /* Reduced from 1.1rem */
     }
 
     .hero-buttons {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        gap: 12px;
+        gap: 10px; /* Reduced from 12px */
     }
     
     .hero-buttons .btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 260px; /* Reduced from 280px */
     }
 
     .hero-stats {
         justify-content: center;
-        gap: 30px;
+        gap: 25px; /* Reduced from 30px */
     }
 
     .phone-mockup {
-        width: 250px;
-        height: 500px;
+        width: 230px; /* Reduced from 250px */
+        height: 460px; /* Reduced from 500px */
     }
 
     .floating-elements {
@@ -1583,11 +1583,11 @@ button {
     }
 
     .section-header h2 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Reduced from 2rem */
     }
     
     .section-header p {
-        font-size: 1rem;
+        font-size: 0.95rem; /* Reduced from 1rem */
     }
 
     .features-grid {
@@ -1602,8 +1602,8 @@ button {
     /* Improved gallery grid for mobile - single column for better readability */
     .gallery-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
-        max-width: 400px;
+        gap: 20px; /* Reduced from 25px */
+        max-width: 380px; /* Reduced from 400px */
         margin: 0 auto;
     }
     
@@ -1613,39 +1613,39 @@ button {
     }
     
     .gallery-image {
-        height: 300px; /* Increased height for better visibility */
+        height: 280px; /* Reduced from 300px */
     }
     
     .gallery-item .gallery-info {
-        padding: 24px 20px; /* More padding for touch-friendly interface */
+        padding: 20px 18px; /* Reduced from 24px 20px */
     }
     
     .gallery-item .template-title {
-        font-size: 1.3rem; /* Larger title for better readability */
-        margin-bottom: 16px;
-        line-height: 1.4;
+        font-size: 1.2rem; /* Reduced from 1.3rem */
+        margin-bottom: 14px; /* Reduced from 16px */
+        line-height: 1.3;
     }
     
     .gallery-item .template-pricing {
-        margin-bottom: 20px;
+        margin-bottom: 18px; /* Reduced from 20px */
         flex-direction: row;
-        gap: 12px;
+        gap: 10px; /* Reduced from 12px */
         justify-content: center;
         align-items: center;
     }
     
     .gallery-item .price-current {
-        font-size: 1.5rem; /* Larger price for emphasis */
+        font-size: 1.3rem; /* Reduced from 1.5rem */
     }
     
     .gallery-item .price-original {
-        font-size: 1.1rem; /* Slightly larger original price */
+        font-size: 1rem; /* Reduced from 1.1rem */
     }
     
     .gallery-item .btn-view-template {
-        padding: 14px 20px; /* More padding for touch-friendly buttons */
-        font-size: 1rem;
-        min-height: 48px; /* Minimum touch target size */
+        padding: 12px 18px; /* Reduced from 14px 20px */
+        font-size: 0.95rem; /* Reduced from 1rem */
+        min-height: 44px; /* Reduced from 48px */
     }
 
     .testimonials-grid {
