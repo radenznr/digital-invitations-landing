@@ -106,8 +106,8 @@ function initializeGalleryFilters() {
         });
     }
 
-    // Initialize with wedding category (default active tab)
-    filterGallery('wedding');
+    // Initialize with premium category (default active tab)
+    filterGallery('premium');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -122,14 +122,7 @@ function initializeGalleryFilters() {
         });
     });
 
-    // Preview button functionality
-    const previewButtons = document.querySelectorAll('.gallery-overlay .btn');
-    previewButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.stopPropagation();
-            showTemplatePreview();
-        });
-    });
+    // This section is removed as gallery overlay buttons don't exist in current HTML structure
 }
 
 // Template Preview Modal (simplified version)
@@ -391,9 +384,16 @@ function initializeViewTemplateButtons() {
     const viewButtons = document.querySelectorAll('.btn-view-template');
     
     viewButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const templateId = this.getAttribute('data-template');
-            viewTemplateInvitation(templateId);
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const templateId = this.getAttribute('data-template') || this.closest('.gallery-item').querySelector('.template-title').textContent;
+            if (templateId) {
+                viewTemplateInvitation(templateId);
+            } else {
+                console.warn('Template ID not found for button:', this);
+                // Fallback to general WhatsApp message
+                openWhatsApp('Halo, saya tertarik dengan template undangan yang ada. Bisakah Anda memberikan informasi lebih lanjut?');
+            }
         });
     });
 }
@@ -644,11 +644,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Track template previews
-    const previewButtons = document.querySelectorAll('.gallery-overlay .btn');
+    // Track template previews - Updated to work with current HTML structure
+    const previewButtons = document.querySelectorAll('.btn-view-template');
     previewButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const templateName = this.closest('.gallery-item').querySelector('h4').textContent;
+            const templateName = this.closest('.gallery-item').querySelector('.template-title').textContent;
             trackEvent('template_preview', {
                 template_name: templateName
             });
